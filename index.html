@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestos com a mão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"
+        integrity="sha512-AQMSn1qO6KN85GOfvH6BWJk46LhlvepblftLHzAv1cdIyTWPBKHX+r+NOXVVw6+XQpeW4LJk/GTmoP48FLvblQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <div class="container">
+        <center>
+            <h3 class="btn btn-info heading"> APP GESTOS COM A MÃO
+                <br>
+                <span>&#129295;</span>
+                <span>&#9996;</span>
+                <span>&#128077;</span>
+            </h3>
+
+            <br><br>
+
+            <p style="font-size: 22px;">Tire uma foto de um gesto para saber seu significado</p>
+            <p style="font-size: 18px;"> O modelo está treinando os seguintes gestos: </p>
+            <p style="font-size: 30px;">&#129295; | &#9996; | &#128077; </p>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Visualização da webcam: </label>
+                <div id="camera"></div>
+                <br><br>
+                <button onclick="take_snapshot();" class="btn btn-primary">Capturar Imagem</button>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Previsão: </label>
+                <p class="object_name" id="resultado"></p>
+                <p class="gesture_icon" id="icone"></p>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Foto:</label>
+                <div id="captura"></div>
+                <br><br>
+                <button onclick="check();" class="btn btn-primary">Prever Gesto da Mão</button>
+            </div>
+
+        </center>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
